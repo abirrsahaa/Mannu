@@ -14,6 +14,7 @@ import TogetherMomentsSection from './components/sections/TogetherMomentsSection
 import ProposalSection from './components/sections/ProposalSection';
 import MusicPlayer from './components/MusicPlayer';
 import { motion } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/react"
 
 // Register GSAP Plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -65,6 +66,8 @@ function App() {
         <ProposalSection />
       </Suspense>
       <MusicPlayer playing={playing} setPlaying={setPlaying} />
+      <Analytics />
+
     </div>
   );
 }
